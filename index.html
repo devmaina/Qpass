@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qpass Tickets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff8c00, #ff4500);
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            color: white;
+        }
+
+        .svg-animation {
+            width: 100px;
+            height: 100px;
+            animation: rotateLines 3s linear infinite;
+        }
+
+        @keyframes rotateLines {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .circle-group {
+             
+            width: 100px;
+            height: 100px;
+        }
+
+        .circle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50%;
+            animation: circleOutwards 4s ease-in-out infinite;
+        }
+
+        @keyframes circleOutwards {
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(99);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Qpass</h1>
+        <p>For all round auth pass</p>
+        <button style="border-radius: 20px; background-color: aliceblue; border: none; width: 10vw; height: 30px;"> Welcome</button>
+        <div class="svg-animation">
+            <div class="circle-group">
+                <!-- Adjust the number of circles as needed -->
+                <div class="circle" style="top: 40px; left: 40px;"></div>
+                <div class="circle" style="top: 20px; left: 20px;"></div>
+                <div class="circle" style="top: 60px; left: 80px;"></div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="16"></line>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
